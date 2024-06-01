@@ -45,19 +45,13 @@ config.keys = {
 		action = wezterm.action.EmitEvent("toggle-opacity"),
 	},
 }
--- for i = 1, 8 do
---   -- ALT + number to activate that tab
---   table.insert(config.keys, {
---     key = tostring(i),
---     mods = 'ALT',
---     action = wezterm.action.ActivateTab(i - 1),
---   })
---   -- F1 through F8 to activate that tab
---   table.insert(config.keys, {
---     key = 'F' .. tostring(i),
---     action = wezterm.action.ActivateTab(i - 1),
---   })
--- end
+for i = 1, 8 do
+  -- F1 through F8 to activate that tab
+  table.insert(config.keys, {
+    key = 'F' .. tostring(i),
+    action = wezterm.action.ActivateTab(i - 1),
+  })
+end
 
 config.mouse_bindings = {
 	-- Scrolling up while holding CTRL increases the font size
