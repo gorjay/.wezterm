@@ -30,7 +30,7 @@ wezterm.on("toggle-opacity", function(window, pane)
 end)
 
 --- Key bindings
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+config.leader = { key = "0", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	-- Send "CTRL-A" to the terminal when pressing CTRL-A, CTRL-A
 	{
